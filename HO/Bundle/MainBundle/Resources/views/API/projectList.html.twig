@@ -1,0 +1,10 @@
+<ul id="projList" class="simple">
+    {% for company in companies %}
+        <li class="customer">{{ attribute(company, 'company') }}</li>
+        {% for key, project in attribute(company, 'projects') %}
+            <li>
+                <a href="{{ path('ho_main_dashboard_detail', { id : project.id }) }}" class="lhs"><span>&nbsp;</span></a><a class="rhs ql" href="{{ path('ho_main_dashboard_detail', { id : project.id }) }}">{{ project }}</a>
+            </li>
+        {% endfor %}
+    {% endfor %}
+</ul>

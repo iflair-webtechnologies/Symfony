@@ -1,0 +1,72 @@
+{% extends '::tools.html.twig' %}
+{% block title %}Overzicht{% endblock %}
+
+{% block categories %}{% endblock %}
+
+{% block leftmenu %}
+    
+{% endblock %}
+
+{% block tabs %}
+    {% render(controller('MainBundle:Partial:tabs', { request : app.request, tabs : tabs })) %}
+{% endblock %}
+
+{% block body %}
+<div class="titlecontent">
+<ul id="peopleOptions" class="options">
+<li>
+<button class="btn btn-success btn-hasIcon" onclick="pop()" type="button">
+<span class="btn-addIcon"></span>
+Add project
+</button>
+</li>
+</ul>
+<h2 id="pageTitle" data-bind="html:pageTitle()">Your feeds</h2>
+</div>
+<div class="translucent_cover" id="overlay" style="visibility: hidden;">
+</div>
+
+<div class="top_block" id="top_block" style="visibility: hidden;">
+	<div id="newProject" class="sectionFormNewProject">
+		<div class="title">
+			<div class="titlecontent">
+				<h2>Add xml feed</h2>
+			</div>
+		</div>
+		<div class="sectionContent">
+			<form id="newXmlFeed" method="post">
+				<div id="newXmlFeedDiv">
+					<label>
+						Name of xml feed
+					</label>
+					<div>
+					<input id="newXmlFeedTitle" class="text" type="text" style="width:590px;" maxlength="255" tabindex="1">
+					</div>
+				</div>
+				<div id="clientXmlFeed">
+					<label>Select Client</label>
+					<div><select id="selectClient"></select></div>
+				</div>
+				<div id="addXmlFeedUrl">
+					<label>Add a XML feed URL</label>
+					<div>
+					<input id="xmlfeedUrl" class="text" type="text" style="width:590px;" maxlength="255" tabindex="1">
+					</div>
+				</div>
+				<div id="projectXmlFeed">
+					<label>Select Project</label>
+					<div><select id="selectProject"></select></div>
+				</div>
+				<div class="formFooter">
+					<div id="newProjectFormFooter">					
+						<input type="submit" id="addFeed" value="Add project" class="action btn btn-success">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div align="right">
+		<input class="blue_button" onclick="close_pop()" type="button" value="Close" />
+	</div>
+</div>
+{% endblock %}

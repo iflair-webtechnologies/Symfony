@@ -1,0 +1,41 @@
+{% extends '::dashboard.html.twig' %}
+{% block title %}Gebruikers{% endblock %}
+
+{% block categories %}{% endblock %}
+{% block tabs %}
+    {% render(controller('MainBundle:Partial:tabs', { request : app.request, tabs : tabs })) %}
+{% endblock %}
+
+{% block body %}
+    <a href="{{ path('ho_main_admin_adduser') }}">Gebruiker toevoegen</a><br />
+    <br />
+    <table class="dataGrid marginTop selT">
+        <tr>
+            <th>Gebruikersnaam</th>
+            <th>E-mailadres</th>
+            <th colspan="2">Actief</th>
+        </tr>
+    {% for user in users %}
+        <tr onclick="window.location.href='{{ path('ho_main_admin_edituser', { id : user.id }) }}';">
+            <td>
+                {{ user.username }}
+            </td>
+            <td>
+                {{ user.email }}
+            </td>
+            <td>
+                {% if user.enabled %}
+                    Ja
+                {% else %}
+                    Nee
+                {% endif %}
+            </td>
+            <td>
+                <a href="{{ path('ho_main_admin_changepassword', { id : user.id }) }}">Wachtwoord aanpassen</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+    <br />
+    <a href="{{ path('ho_main_admin_adduser') }}">Gebruiker toevoegen</a>
+{% endblock %}

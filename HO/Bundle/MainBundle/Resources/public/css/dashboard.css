@@ -1,0 +1,116 @@
+body.dashboard { font: 14px 'ProximaNova', helvetica, arial, sans-serif; }
+body.dashboard div.header { background: #559beb; padding: 0; margin: 0; min-width: 980px; width: 100%; min-height: 80px; position: relative; height: 110px; }
+body.dashboard div.header h1 { padding: 20px 0 18px 20px; margin: 0; letter-spacing: 0; color: #FFFFFF; text-align: left; overflow: hidden; position: relative; font: normal 30px/30px 'ProximaNova-Semibold',helvetica,arial,sans-serif }
+body.dashboard div#topNavBarNew { overflow: hidden; padding: 0; height: 34px; background: rgba(0,0,0,0.2); box-shadow: inset rgba(0,0,0,0.1) 0px -1px 0; }
+body.dashboard div#topRight { height: 36px; padding: 0; margin: 0; position: absolute; top: 0; right: 0; }
+body.dashboard div#topRight ul#topRightNav { height: 36px; float: right; list-style: none; margin: 0; padding: 0; }
+body.dashboard div#topRight ul#topRightNav li { float: left; list-style: none; }
+body.dashboard div#topRight ul#topRightNav li a:link, div#topRight ul#topRightNav li a:visited { float: left; font-size: 13px; color: #FFFFFF; line-height: 13px; text-decoration: none; margin: 0; padding: 10px 4px 12px 4px; }
+body.dashboard div#topLeftDashTabsNew { padding: 0; margin: 0; overflow: hidden; }
+body.dashboard #topLeftDashTabsNew ul { margin: 0; padding: 0; list-style: none; }
+body.dashboard #topLeftDashTabsNew ul li { float: left; margin: 0; padding: 0; color: #999999; text-transform: uppercase; }
+body.dashboard #topLeftDashTabsNew ul li.sel a { background-color: #559beb; color: #FFFFFF; font-family: 'ProximaNova-Bold', Helvetica,Arial,sans-serif; }
+body.dashboard #topLeftDashTabsNew ul li a { display: block; padding: 10px 8px 12px 8px; text-decoration: none; font-size: 12px; margin: 0; color: #FFFFFF; }
+body.dashboard #mainTable { background: #FFFFFF; }
+body.dashboard td.sidebar { width: 250px; overflow: hidden; vertical-align: top; background: #F1F1F1; border-right: 1px solid #B9BABC; display: table-cell; }
+body.dashboard div#mlogo { background: #FFFFFF; width: 100%; border: none; border-bottom: 1px solid #DDDDDD; padding: 10px 0 10px 0; margin: 0; border-radius: 0; overflow: hidden; text-align: center; }
+body.dashboard div.sidebarContent { max-width: 230px; padding: 0 0 40px 10px; }
+body.dashboard div#yourProjects ul, div#inactiveProjects ul { padding: 0; margin: 10px 10px 20px 10px; list-style: none; width: 100%; }
+body.dashboard ul#projList li.customer { color: #000000; font: 16px 'ProximaNova-SemiBold',helvetica,arial,sans-serif; margin: 0; padding: 10px 10px 10px 0; list-style: none; }
+body.dashboard div#yourProjects ul li, div#inactiveProjects ul li { padding: 3px 0 3px 0; font-family: ProximaNova-Regular,helvetica,arial,sans-serif; margin: 0; width: 100%; background: none; }
+body.dashboard td.sidebar ul.simple li, td.sidebar ul.simple li { list-style: none; border: none; color: #222222; clear: both !important; float: none !important; overflow: hidden; margin: 0; }
+body.dashboard div#yourProjects ul li a.rhs { padding: 0 0 3px 0; position: relative; margin-left: 20px; display: block; }
+body.dashboard div#yourProjects ul li a.lhs span, div#inactiveProjects ul li a.lhs span { float: left; display: block; width: 20px; text-indent: -5000px; overflow: hidden; min-height: 16px; padding: 0 0 3px 0; margin-left: -2px; }
+body.dashboard div#yourProjects ul li a.lhs span { background: url('../../../bundles/main/images/iconSprite9.png') no-repeat; background-position: 0 -48px; }
+body.dashboard td.sidebar ul.simple li a, td.sidebar ul.extended li a { color: #222222; }
+body.dashboard .MainTabsWrapper { height: auto !important; overflow: hidden; margin-right: 20px !important; }
+body.dashboard .Tabs { margin: 0; padding: 0; position: relative; }
+body.dashboard .Tabs ul { padding: 0; list-style: none; border-bottom: 3px solid #DDDDDD; top: 0; left: 20px; right: 20px; }
+body.dashboard #MainTabs { height: auto !important; position: static !important; margin: 0 0 0 20px !important; overflow: hidden; border-right: none !important; display: block !important; clear: both; float: none; border: none;  }
+body.dashboard #MainTabs li { z-index: 2; border-bottom: 3px solid #DDD!important; }
+body.dashboard #MainTabs li.sel { border-bottom: 3px solid #5cb85c!important; }
+body.dashboard .Tabs ul li { float: left; margin: 0; position: relative; }
+body.dashboard .Tabs ul li a { display: inline-block; height: 50px; text-decoration: none; color: #9B9B9B; line-height: 56px; text-transform: uppercase; padding: 0 10px; width: 100%; float: none; }
+body.dashboard .Tabs ul li.sel a { color: #000000; display: inline-block; height: 50px; text-decoration: none; line-height: 56px; text-transform: uppercase; padding: 0 10px; width: 100%; float: none; }
+body.dashboard #MainTabs .MainTabsLine-first { top: 50px; }
+body.dashboard #MainTabs .MainTabsLine { display: block; height: 3px; background: #DDDDDD; border: none !important; position: absolute !important; width: 100%; z-index: 1; }
+body.dashboard #MainTabs .MainTabsLine-second { top: 103px; }
+body.dashboard #MainTabs .MainTabsLine-third { top: 156px; }
+body.dashboard .titlecontent h2 { padding: 0; font: 32px 'ProximaNova', helvetica, arial, sans-serif; color: #333; font-weight: normal; }
+body.dashboard div.titleHolder { padding: 19px 20px 16px 22px; }
+
+body.dashboard .minHeight { min-height: 400px; }
+body.dashboard .sectionContent { background: #FFFFFF; margin: 0; padding: 7px 20px 20px 20px; }
+body.dashboard span.brightYellowAlert { background: #eac084; }
+body.dashboard span.redAlert, span.yellowAlert, span.greenAlert, span.blueAlert, span.purpleAlert, span.cyanAlert, span.brightYellowAlert { position: relative; bottom: 1px; left: 4px; min-width: 9px; height: 16px; margin-top: -11px; padding: 2px 6px; font-weight: normal; font: 12px/12px "ProximaNova-SemiBold",helvetica,arial,sans-serif; color: #FFFFFF; text-align: center; text-shadow: 0 1px rgba(0,0,0,0.2); border: 0; box-shadow: inset 0 0 1px 1px rgba(0,0,0,0.2); border-radius: 2px; }
+
+body.dashboard div#subCats { padding: 0; margin: 0; overflow: visible; min-height: 36px; background: rgba(243,243,243,0.02); border-bottom: 1px solid #d9d9d9; }
+body.dashboard div#subCats ul { padding: 0; margin: 0; width: 95%; min-height: 36px; position: relative; left: 10px; right: 10px; padding-bottom: 7px; }
+body.dashboard div#subCats ul li { margin: 0; padding: 0; list-style: none; float: left; border: none; position: relative; }
+body.dashboard div#subCats ul li.sel { padding-top: 1px; margin-bottom: -1px; }
+body.dashboard div#subCats ul li.sel a { margin-top: -1px; color: #000000; }
+body.dashboard div#subCats ul li a { font-size: 15px; padding: 10px 14px 1px 14px; text-decoration: none; height: 26px; display: block; background: none; font-family: 'ProximaNova-Regular',helvetica,arial,sans-serif; }
+body.dashboard div#subCats li.sel span.nipple { width: 12px; height: 8px; position: absolute; bottom: -12px; left: 50%; margin-left: -6px; z-index: 1; background: url('../../../bundles/main/images/nippleUp.png') no-repeat; }
+body.dashboard div#subCats ul li a { font-size: 15px; padding: 10px 14px 1px 14px; text-decoration: none; height: 26px; color: #A0A0A0; display: block; background: none; font-family: 'ProximaNova-Regular',helvetica,arial,sans-serif; }
+
+body.dashboard .projectActivity { position: relative; }
+body.dashboard #mainContent .projectActivity .timelineLine { width: 5px; top: 10px; left: 31px; position: absolute; height: 100%; background: #DDD; }
+body.dashboard table.overview { width: 100%; margin-top: 12px; }
+body.dashboard .projectActivity tr.sectionDate td, .projectActivity tr.timelineLoadMore td { padding: 0; border-bottom: none; }
+body.dashboard .projectActivity div.timelineCircle { background: #FFFFFF; position: relative; width: 68px; height: 68px; border-radius: 68px; border: 4px solid #DDDDDD; text-align: center; }
+body.dashboard .projectActivity div.timelineCircle div.filled { width: 56px; height: 56px; border-radius: 56px; position: absolute; top: 2px; left: 2px; background: #EEEEEE; }
+body.dashboard .projectActivity tr.sectionDate td span { color: #333333; font-family: helvetica, verdana, sans-serif; font-size: 14px; font-weight: bold; padding: 0; text-shadow: 0 1px 1px rgba(255, 255, 255, .9); margin-bottom: 5px;  }
+body.dashboard .projectActivity div.timelineCircle span { position: relative; top: 30px; display: block; margin-top: -7px; font: bold 14px/14px 'ProximaNova-Semibold', helvetica, arial, sans-serif;  }
+body.dashboard table.overview th, table.overview td { padding: 8px 5px; }
+body.dashboard table.overview td { font: 14px/14px 'ProximaNova-Regular',helvetica,arial,sans-serif; border-bottom: 1px solid #ECECEC; }
+body.dashboard table.overview td.type { width: 85px; padding: 0; }
+body.dashboard table.overview td { border-bottom: 1px solid #ECECEC; font: 14px/14px 'ProximaNova-Regular',helvetica,arial,sans-serif; }
+body.dashboard table.overview tr.task td.type p { background: #f19a92; }
+body.dashboard table.overview td.type p { display: block; background: #DDDDDD; width: 95px; overflow: hidden; line-height: 17px; margin: 0; padding: 2px 4px 2px 0; border-radius: 2px; color: #FFFFFF; text-align: center; }
+body.dashboard table.overview td.item { line-height: 15px;  }
+body.dashboard body#dashboard .projectActivity table.overview td.item a, .projectActivity table.overview td.item a { color: #0061bc; }
+body.dashboard table.overview td.item span { color: #999999; }
+body.dashboard table.overview td.action { color: #999999; text-align: right;  }
+body.dashboard table.overview td.name { color: #666666; width: 110px;  }
+body.dashboard table.overview td.date { color: #999999; white-space: nowrap; text-align: right; }
+body.dashboard table.overview tr.completed td.detail, table.overview tr.completed td.detail span, table.overview tr.completed td.item, table.overview tr.completed td.item span { text-decoration: line-through; color: #909090; }
+
+body.dashboard div.milestone { padding: 0 0 20px 132px; margin: 20px 0 0 0; overflow: hidden; min-height: 100px; border-bottom: #EBEBEB; }
+body.dashboard .milestone div.msDaysAway { font-family: Helvetica,Arial,sans-serif; width: 120px; text-align: right; padding: 5px 10px 5px 5px; font-size: 11px; color: #AAAAAA; float: right; background: #F1F1F1; border-radius: 2px; }
+body.dashboard div.msDaysAway strong { font-weight: normal !important; font-family: Arial, Helvetica, sans-serif; }
+body.dashboard div.msDescription { white-space: pre-wrap;max-width:600px;padding:10px 0 0 0;color:#666;line-height:150%;font-style:italic;font-size:12px; }
+body.dashboard .msResponsibleParties { font-size: 14px; font-family: ProximaNova-Regular,Arial,Helvetica,sans-serif; }
+body.dashboard div.msIcon { position: absolute; left: 0; top: 0; width: 120px; font-family: 'ProximaNova-Semibold',Arial,sans-serif; }
+body.dashboard .msCompleted div.msIconHdr { background: #97dc81; color: #FFFFFF; }
+body.dashboard div.msIconHdr { text-align: center; padding: 5px 2px; text-transform: uppercase; font: 13px/14px 'ProximaNova-Semibold',Arial,sans-serif; border-top-left-radius: 5px; border-top-right-radius: 5px; }
+body.dashboard div.msIconBody { background: #F1F1F1; border-top: 1px solid #FFFFFF; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; }
+body.dashboard div.msIconBodyTxt { text-align: center; padding: 12px 0 0 0; color: #000000; font: 46px/40px 'ProximaNova-Bold',Arial,sans-serif; }
+body.dashboard div.msIconDueWeekday span { padding: 5px 0 10px 0; text-align: center; display: block; color: #CCCCCC; font-size: 14px; font-family: 'ProximaNova-Regular',Arial,sans-serif; }
+body.dashboard div.msName { font: 16px 'ProximaNova-SemiBold',helvetica,arial,sans-serif; color: #333333; letter-spacing: 0; position: relative; padding: 2px 0 0 0; display: inline-block; }
+body.dashboard div.msCompleted div.msName a.msName { text-decoration: line-through; }
+body.dashboard .msUpcoming div.msIconHdr { background: #eac084; color: #ffffff; }
+body.dashboard div.msName a.msName { color: #333333; padding: 0 5px; font-size: 18px; position: relative; bottom: 2px; }
+body.dashboard span.taskStart { font-family: 'Lucida Grande',verdana,helvetica,arial,sans-serif; font-style: normal; font-size: 10px; padding: 0 0 0 3px; margin: 0 0 0 2px; display: inline-block; margin-left: 10px; color: #AAAAAA; text-decoration: none; }
+
+body.dashboard div#MilestoneContent.taskList { font-size: 14px; font-weight: bold; padding: 0 20px 0 20px; background-color: #F6F6F6!important; border: 1px solid #E1E1E1; border-radius: 5px; }
+body.dashboard div#MilestoneContent.taskList div.milestoneWrap { background-color: #FFFFFF; font-weight: normal; padding: 15px 15px 15px 15px; margin: 20px 0 20px 0; font-size: 16px; border-bottom: 1px solid #D7D7D7; border-right: 1px solid #D7D7D7; border-top: 1px solid #ECECEC; border-left: 1px solid #ECECEC; }
+body.dashboard div.milestone { padding: 0 0 20px 132px; overflow: hidden;  }
+body.dashboard div.pbHolder { overflow: hidden; display: inline-block; padding: 2px; }
+body.dashboard div.pbHolder div.progressbar {  width: 180px; background: #e6e6e6; box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,0.1); border-radius: 5px; float: left; margin-top: 3px; height: 8px; } /* #42b7e7 progessbalk kleur */
+body.dashboard div.pbHolder span.pbLegend { float: left; font-size: 11px; font-family: arial; color: #AAAAAA; margin-left: 5px;  }
+
+body.dashboard div.taskList { padding: 0 0 1px 0; margin: 0; background: #FFFFFF; }
+body.dashboard div.taskList h3 { margin: 0; }
+body.dashboard h3.tlh3 { background: #e9eaee!important; padding: 10px 10px 10px 35px!important; font-size: 16px!important; line-height: 16px!important; margin-bottom: 5px!important; position: relative; font-family: 'ProximaNova-SemiBold',arial,helvetica,sans-serif!important; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; border-radius: 4px; }
+body.dashboard div.taskListContent { padding: 0 0 10px 0; }
+body.dashboard div.taskListTasks { margin: 10px 0 0 0; }
+body.dashboard .taskListTasks .task { overflow: visible; }
+body.dashboard div.task { clear: both; padding: 4px 0 4px 0; background: #FFFFFF; border-bottom: 1px solid #F6F6F6; transition: background linear .2s; }
+body.dashboard div.taskLHS { float: left; width: 68px; }
+body.dashboard div.taskRHSH { position: relative; padding: 0; min-height: 25px; }
+body.dashboard div.taskRHS { margin: 0; padding: 0; font-size: 13px; line-height: 18px; color: #333333; }
+body.dashboard div.taskRHS a { color: #222222; text-decoration: none; }
+body.dashboard a.taskBubble, span.taskBubble { width: 80px; max-width: 80px; overflow: hidden; font-family: ProximaNova-Regular,helvetica,arial,sans-serif; background-color: #EEE; height: 17px; font-size: 12px; line-height: 17px; margin: 2px 8px 0 0; display: inline-block; min-width: 80px; text-overflow: ellipsis; white-space: nowrap; -webkit-border-radius: 3px; -moz-border-radius: 3px; -khtml-border-radius: 3px; border-radius: 3px; padding: 2px 8px 3px 8px; float: left; }
+body.dashboard .taskRHSText { margin-top: 2px; display: inline-block; overflow: hidden; }
+body.dashboard div.taskRHS a { color: #222222; text-decoration: none; }
+body.dashboard span.taskName { font-family: ProximaNova-Regular,helvetica,arial,sans-serif; margin-top: 1px; line-height: 18px; text-decoration: none; color: #333333; position: relative; -webkit-touch-callout: text; -webkit-user-select: text; -khtml-user-select: text; -moz-user-select: text; -ms-user-select: text; display: inline-block; }

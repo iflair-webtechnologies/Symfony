@@ -1,0 +1,16 @@
+body { background: #559beb; }
+div.projectAnnouncement { display: block; overflow: hidden; padding: 5px; margin: 10px; }
+div#PAI { position: relative; padding: 5px 20px 0 35px; color: #6a5f49 !important; text-shadow: 0 1px 1px white; background-color: #f9fbe4; background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 90%), -webkit-repeating-linear-gradient(top, transparent 0%, transparent 29px, rgba(232, 238, 232, 1) 29px, rgba(232, 238, 232, 1) 30px); background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 90%), -moz-repeating-linear-gradient(top, transparent 0%, transparent 29px, rgba(232, 238, 232, 1) 29px, rgba(232, 238, 232, 1) 30px); background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 90%), -o-repeating-linear-gradient(top, transparent 0%, transparent 29px, rgba(232, 238, 232, 1) 29px, rgba(232, 238, 232, 1) 30px); border: 1px solid #fff; border-radius: 5px; border-color: rgba(224, 224, 224, 0.9); box-sizing: border-box; margin: 0; display: block; -moz-box-sizing: border-box; min-height: 56px;  }
+div#PAI p span { font-size: 11px; color: #AAA; }
+div#PAI:before, div#PAI:after { content: ''; position: absolute; top: 0; bottom: 0; }
+div#PAI:before { left: 18px; width: 4px; border: 1px solid #efcfad; border-color: rgba(239, 207, 173, 0.9); border-width: 0 1px; }
+div#PAI p { margin: 0 0 7px 0; color: #6A5F49 !important; line-height: 22px; }
+div.redactor_editor { line-height: 1.6em !important; font-size: 14px !important; font-family: Helvetica,arial,sans-serif!important;  }
+
+table.dataGrid { font-size: 14px; border: none; width: 100%; }
+table.dataGrid tr { cursor: pointer; line-height: 30px; }
+table.dataGrid th:first-child { border-radius: 5px 0 0 5px; -moz-border-radius: 5px 0 0 5px; -webkit-border-radius: 5px 0 0 5px; }
+table.dataGrid th:last-child { border-radius: 0 5px 5px 0; -moz-border-radius: 0 5px 5px 0; -webkit-border-radius: 0 5px 5px 0; }
+table.dataGrid th { background: #E9EAEE!important; text-transform: uppercase; color: #666; padding: 5px;  }
+table.dataGrid td { border-top: none!important; border-left: none!important; border-bottom: 1px solid #E0E0E0; padding: 5px; text-align: left; vertical-align: middle; color: #666666; }
+table.dataGrid tr:hover { background: #F3F3F3!important; cursor: pointer; }

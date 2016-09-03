@@ -1,0 +1,9 @@
+<div class="projectAnnouncement">
+    <div id="PAI" class="formatted">
+        {% for notification in notifications %}
+            <p>
+                <span>{{ notification.createdAt|date('d-m-Y H:i') }}</span> {{ notification.message|striptags('<a>') }}
+            </p>
+        {% endfor %}
+    </div>
+</div>

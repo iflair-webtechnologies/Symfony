@@ -1,0 +1,14 @@
+# src/Acme/DemoBundle/Resources/config/routing.yml
+random:
+    path:     /random/{number}
+    defaults: { _controller: AcmeStreamBundle:Random:index, number: 0 }
+ajax:
+    path:     /ajax/
+    defaults: { _controller: AcmeStreamBundle:Random:ajax }
+clients:
+    path:     /clients/
+    defaults: { _controller: AcmeStreamBundle:Random:clients }	
+projects:
+    path:     /projects/
+    defaults: { _controller: AcmeStreamBundle:Random:projects }	
+    

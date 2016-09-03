@@ -1,0 +1,10 @@
+div.loginBoxWrap { margin: -222px auto 0 auto; position: absolute; top: 50%; left: 50%; margin-left: -178px; height: 431px; border-radius: 10px; width: 372px; }
+div.login-white-shadow { box-shadow: 0 5px 400px rgba(255,255,255,0.32); border-radius: 10px; }
+div.loginBox { background: #FFFFFF; border-radius: 10px; width: inherit; padding: 30px 34px; box-shadow: 0 5px 30px rgba(0,0,0,0.52); min-width: 300px; overflow: hidden; }
+div.loginBox .btn-lg { width: 100%; }
+div.loginLogo { display: block; text-align: center; }
+div.loginLogo img { display: inline-block; max-height: 150px; }
+div.loginSiteName { margin: 20px auto 0; color: #333333; font: 20px 'ProximaNova-SemiBold',helvetica,arial,sans-serif; text-align: center; }
+button#_submit { width: 100%; }
+div.lFooter { display: block; margin: 25px auto 0 auto; padding: 0; width: 370px;  }
+div.lFooter a { color: #FFFFFF; margin-right: 10px; text-decoration: none; font-size: 14px; border-bottom: 1px solid #818b99; }

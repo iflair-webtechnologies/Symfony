@@ -1,0 +1,20 @@
+@font-face {
+    font-family: ProximaNova;
+    src: url("../../../../../../../web/font/ProximaNova-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ProximaNova-Regular;
+    src: url("../../../../../../../web/font/ProximaNova-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ProximaNova-Bold;
+    font-weight: bold;
+    src: url("../../../../../../../web/font/ProximaNova-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ProximaNova-Semibold;
+    src: url("../../../../../../../web/font/ProximaNova-Semibold.otf") format("opentype");
+}

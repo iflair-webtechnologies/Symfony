@@ -1,0 +1,12 @@
+{% extends '::dashboard.html.twig' %}
+{% block title %}Overzicht{% endblock %}
+
+{% block categories %}{% endblock %}
+{% block tabs %}
+    {% render(controller('MainBundle:Partial:tabs', { request : app.request, tabs : tabs })) %}
+{% endblock %}
+
+{% block body %}
+    Happy Idiots admin panel.<br />
+    Maak een keuze uit bovenstaande links.
+{% endblock %}

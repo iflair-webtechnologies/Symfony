@@ -1,0 +1,23 @@
+{% extends '::base.html.twig' %}
+
+ {% block body %}
+ 	<input type="hidden" name="team" id="team" value="{{ number }}" />
+ 	<div class="contaner" style="background: none repeat scroll 0% 0% rgb(255, 255, 255);">
+	<div class="header">
+        <div class="heading"><span>Milestones</span> Team Pluto 
+        {% if number != 0 %}
+        	{{ number }}
+        {% endif %}
+        , Succes!</div>
+    </div>
+    <div class="listing milestone_listing">
+       
+    </div>
+
+</div>
+<link rel="stylesheet" href="{{ asset('bundles/stream/css/style.css') }}"></link>
+<script type="text/javascript" src="{{ asset('bundles/stream/js/jquery.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/stream/js/script.js') }}"></script>
+
+ {% endblock %}
+ 

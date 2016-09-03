@@ -1,0 +1,61 @@
+{% extends '::dashboard.html.twig' %}
+{% block title %}Milestones overzicht{% endblock %}
+
+{% block header %}
+    {% render(controller('MainBundle:Partial:header', { request : app.request, title : ", accountmanager: " ~ project.accountmanager })) %}
+{% endblock %}
+
+{% block categories %}{% endblock %}
+
+{% block body %}
+    <div data-bind="template: { name: milestoneListStateTemplate() }">
+        <div data-bind="template: { name: 'milestone-list-Template', afterRender: renderedTemplate }">
+            <div data-bind="style: {padding: $root.allMilestones ? '7px 20px 20px 20px' : '0' }" style="padding: 0px;">
+
+                <div style="margin-top:20px;">
+                    {% for milestone in milestones %}
+                        <!-- msCompleted voor afgeronde deadlines -->
+                        <div class="milestone hs msUpcoming" style="position:relative;">
+
+                            <div class="msDaysAway"><strong>{{ milestone.away }} dagen resterend</strong></div>
+
+                            {% set deadline = milestone.deadline|slice(0,4) ~ "/" ~ milestone.deadline|slice(4,2) ~ "/" ~ milestone.deadline|slice(6,2) %}
+
+                            <div class="msIcon">
+                                <div data-bind="text: dueMonth" class="msIconHdr">{{ deadline|date('F') }}</div>
+                                <div class="msIconBody">
+                                    <div class="msIconBodyTxt">{{ deadline|date('d') }}</div>
+                                    <div class="msIconDueWeekday"><span>{{ milestone.deadline|date_modify("-1 day")|date('l') }}</span></div>
+                                </div>
+                            </div>
+
+                            <div class="msName">
+                                <a style="margin-left:-4px;" class="msName ql" href="{{ path('ho_main_dashboard_detailmilestone', { id : project.id, milestoneid : milestone.id }) }}">{{ milestone.title }}</a>
+                            </div>
+
+                            {% if milestone.resposiblePartyNames %}
+                            <div style="padding:5px 0 0 0;">
+                                <div class="msAssignedTo">
+                                    <span class="tipped">{{ milestone.resposiblePartyNames }} verantwoordelijk</span>
+                                </div>
+                            </div>
+                            {% endif %}
+
+                            <div class="msDescription">
+                                {% if milestone.description %}
+                                    {{ milestone.description }}
+                                {% else %}
+                                    &nbsp;
+                                {% endif %}
+                            </div>
+
+                            <div style="margin:10px 0 0 30px;">
+                                <ul class="msTaskLists last" style="margin:0;"></ul>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

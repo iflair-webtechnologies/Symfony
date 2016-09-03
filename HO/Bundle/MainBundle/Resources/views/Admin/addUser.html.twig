@@ -1,0 +1,16 @@
+{% extends '::dashboard.html.twig' %}
+{% block title %}Nieuwe gebruiker toevoegen{% endblock %}
+
+{% block categories %}{% endblock %}
+{% block tabs %}
+    {% render(controller('MainBundle:Partial:tabs', { request : app.request, tabs : tabs })) %}
+{% endblock %}
+
+{% block body %}
+    Toevoegen van een nieuwe gebruiker
+    <br />
+
+    {{ form(form) }}
+    <br />
+    <a href="{{ path('ho_main_admin_users') }}">Annuleren</a>
+{% endblock %}

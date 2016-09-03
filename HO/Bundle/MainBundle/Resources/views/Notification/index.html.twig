@@ -1,0 +1,34 @@
+{% extends '::dashboard.html.twig' %}
+{% block title %}Notificaties{% endblock %}
+
+{% block categories %}{% endblock %}
+{% block tabs %}
+    {% render(controller('MainBundle:Partial:tabs', { request : app.request, tabs : tabs })) %}
+{% endblock %}
+
+{% block body %}
+    <a href="{{ path('ho_main_notification_create') }}">Notificatie toevoegen</a><br />
+    <br />
+    <table class="dataGrid marginTop selT">
+        <tr>
+            <th>#</th>
+            <th>Aangemaakt</th>
+            <th>Melding</th>
+        </tr>
+        {% for notification in notifications %}
+            <tr>
+                <td>
+                    {{ notification.id }}
+                </td>
+                <td>
+                    {{ notification.createdAt|date('d-m-Y H:i:s') }}
+                </td>
+                <td>
+                    {{ notification.message|striptags('<a>') }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br />
+    <a href="{{ path('ho_main_notification_create') }}">Notificatie toevoegen</a>
+{% endblock %}

@@ -1,0 +1,9 @@
+<div id="subCats">
+    <ul>
+        {% for tab in tabs %}
+            <li class="first {{ request.get('_route') in tab.match ? 'sel' : '' }}">
+                <a href="{{ tab.path }}" class="ql">{{ tab.title }}<span class="brightYellowAlert">{{ tab.number }}</span></a><span class="nipple"></span>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

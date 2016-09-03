@@ -1,0 +1,105 @@
+{% extends '::dashboard.html.twig' %}
+{% block title %}Milestones overzicht{% endblock %}
+
+{% block categories %}{% endblock %}
+
+{% block body %}
+    <div data-bind="template: { name: milestoneListStateTemplate() }">
+        <div data-bind="template: { name: 'milestone-list-Template', afterRender: renderedTemplate }">
+            <div data-bind="style: {padding: $root.allMilestones ? '7px 20px 20px 20px' : '0' }" style="padding: 0px;">
+
+                <div style="margin-top:20px;" class="contaner">
+                	
+                	<div class="listing">
+                		<ul>
+                		{% for milestone in milestones %}
+                			{% set deadline = milestone.deadline|slice(0,4) ~ "/" ~ milestone.deadline|slice(4,2) ~ "/" ~ milestone.deadline|slice(6,2) %}
+                			
+	                    	{% if milestone.status == 'completed' %}
+	                    		{% set class = '' %}
+	                    		{% set classcom = 'completed_h1_text' %}
+	                    	{% elseif milestone.status == 'late' %}
+	                    		{% set class = 'dark-red' %}
+	                    		{% set classcom = '' %}
+	                    	{% elseif milestone.status == 'upcoming' %}
+	                    		{% set class = 'maroon-c' %}
+	                    		{% set classcom = '' %}
+	                    	{% else %}
+	                    		{% set today = milestone.Today %}
+	                    		{% if today == milestone.deadline %}
+	                    			{% set class = 'yello-c' %}
+	                    			{% set classcom = '' %}
+	                    		{% else %}
+	                    			{% if milestone.Today|date_modify("+7 day")|date('Ymd') > milestone.deadline %}
+	                    				{% set class = 'blue-c' %}
+	                    				{% set classcom = '' %}
+	                    			{% else %}
+	                    				{% set class = 'maroon-c' %}
+	                    				{% set classcom = '' %}
+	                    			{% endif %}
+	                    		{% endif %}
+	                    	{% endif %}
+	                    	
+	                    	<li class="{{ class }}">
+	                    		
+	                    		{% if milestone.status == 'completed' %}
+		                    		<div class="left-image">
+	                    				<img src="{{ asset('bundles/main/images/right.jpg') }}" />
+	                				</div>
+	                			{% else %}
+	                				<div class="left-image left-disc">
+				                    	<div class="month">{{ deadline|date('F') }}</div>
+				                    	<span>{{ deadline|date('d') }}</span>
+				                   		<p>{{ milestone.deadline|date_modify("-1 day")|date('l') }}</p>
+				                	</div>
+                				{% endif %}
+                				
+                				<div class="right-image">
+                					{% if milestone.status == 'completed' %}
+                    					<img src="{{ asset('bundles/main/images/smily.jpg') }}" class="smile" />
+                    				{% endif %}
+                    				<img src="{{ milestone.image }}" class="user" />
+                				</div>	
+                				
+                				<div class="disc">
+                					<div style="display:none;" class="msDaysAway">{{ milestone.away }} dagen resterend</div>
+										<h1 class="{{ classcom }}">
+			                            	<a style="margin-left:-4px;" class="msName ql" href="{{ path('ho_main_dashboard_milestone', { id : milestone.id }) }}">{{ milestone.title }}</a>
+			                            </h1>
+			                            <p>Dicipline: {{ milestone.ProjectName }} <br>
+			                            {% if milestone.resposiblePartyNames %}
+											Verantwoordelijk: {{ milestone.resposiblePartyNames }}
+										{% endif %}	
+										</p>
+				
+			                            {% if milestone.resposiblePartyNames %}
+			                                <div style="padding:5px 0 0 0; display:none;">
+			                                    <div class="msAssignedTo">
+			                                        <span class="tipped">{{ milestone.resposiblePartyNames }} verantwoordelijk</span>
+			                                    </div>
+			                                </div>
+			                            {% endif %}
+		                            
+			                            <div class="msDescription" style="display:none;">
+			                                {% if milestone.description %}
+			                                    {{ milestone.description }}
+			                                {% else %}
+			                                    &nbsp;
+			                                {% endif %}
+			                            </div>
+		                            
+			                            <div style="margin:10px 0 0 30px;">
+			                                <ul class="msTaskLists last" style="margin:0;"></ul>
+			                            </div>
+		                            
+									<!-- msCompleted voor afgeronde deadlines -->
+				                </div>
+                			</li>
+	                    {% endfor %}
+	                	</ul>
+               		</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

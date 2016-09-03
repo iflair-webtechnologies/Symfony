@@ -1,0 +1,12 @@
+<div id="Tabs" class="Tabs MainTabsWrapper">
+    <ul id="MainTabs">
+        {% for tab in tabs %}
+        <li class="first {{ request.get('_route') in tab.match ? 'sel' : '' }}">
+            <a href="{{ tab.path }}" class="ql">{{ tab.title }}</a><span class="nipple"></span>
+        </li>
+        {% endfor %}
+        <li class="MainTabsLine MainTabsLine-first"></li>
+        <li class="MainTabsLine MainTabsLine-second"></li>
+        <li class="MainTabsLine MainTabsLine-third"></li>
+    </ul>
+</div>

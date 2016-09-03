@@ -1,0 +1,57 @@
+{% extends '::base.html.twig' %}
+{% block title %}Log in{% endblock %}
+
+{% block body %}
+    {% if error %}
+        <div>{{ error|trans }}</div>
+    {% endif %}
+
+    <form action="{{ path("fos_user_security_check") }}" method="post">
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+        <div class="loginBoxWrap">
+            <div class="login-white-shadow">
+                <div class="loginBox">
+
+                    <div class="loginLogo">
+                        <img src="{{ asset('bundles/main/images/logo.jpg') }}" alt="Happy Idiots" border="0">
+                    </div>
+
+                    <div class="loginSiteName">Happy Idiots klanten portaal</div>
+
+                    <br />
+
+                    <div id="lUserWrap">
+                        <div class="inputWrap">
+                            <label for="userLogin">Gebruikersnaam of e-mail</label><br />
+                            <input type="text" name="_username" id="userLogin" tabindex="1" placeholder="Je gebruikersnaam" class="form-control" required="required" />
+                        </div>
+                    </div>
+                    <br />
+                    <div id="lPassWrap">
+                        <div class="inputWrap">
+                            <label for="password">Wachtwoord</label><br />
+                            <input type="password" name="_password" id="password" tabindex="2" placeholder="Je wachtwoord" class="form-control" required="required" />
+                        </div>
+                    </div>
+                    <br />
+
+                    <div>
+                        <input type="checkbox" id="remember_me" name="_remember_me" value="on" tabindex="3" /><label for="remember_me">&nbsp;Onthouden</label>
+                    </div>
+
+                    <div style="margin:7px 0 0 0;min-height:60px;position:relative;"><div>
+                            <input class="btn btn-success btn-lg" type="submit" id="_submit" name="_submit" tabindex="4" value="Inloggen" />
+                        </div></div>
+
+                </div>
+            </div>
+
+            <div class="lFooter">
+                <a href="#">Wachtwoord vergeten?</a>
+            </div>
+
+        </div>
+
+    </form>
+{% endblock %}

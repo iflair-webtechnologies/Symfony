@@ -1,0 +1,17 @@
+{% extends '::dashboard.html.twig' %}
+{% block title %}Gegevens van gebruiker bewerken{% endblock %}
+
+{% block categories %}{% endblock %}
+{% block tabs %}
+    {% render(controller('MainBundle:Partial:tabs', { request : app.request, tabs : tabs })) %}
+{% endblock %}
+
+{% block body %}
+    Bewerken van gebruiker: "{{ user.username }}"<br />
+    <br />
+
+    {{ form(form) }}
+
+    <br />
+    <a href="{{ path('ho_main_admin_users') }}">Annuleren</a>
+{% endblock %}

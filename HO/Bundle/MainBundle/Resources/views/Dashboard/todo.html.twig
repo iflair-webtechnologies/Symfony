@@ -1,0 +1,40 @@
+{% extends '::dashboard.html.twig' %}
+{% block title %}Overzicht{% endblock %}
+
+{% block body %}
+    <div class="taskList">
+        {% set previous = '' %}
+        {% for task in tasks %}
+
+            {% if previous != task.todoListName %}
+                <h3 class="tlh3 hs">{{ task.todoListName }}</h3>
+                <div class="taskListContent">
+                <div class="taskListTasks">
+            {% endif %}
+
+            <div class="task topTask">
+            <div class="taskInner hs">
+                <div class="taskRHSH">
+                    <a href="#" class="taskBubble">
+                        <span class="l"></span>
+                        <span class="r"></span>
+                        <span class="n">{{ task.responsiblePartyNames }}</span>
+                    </a>
+                            <span class="taskRHSText">
+                                <a href="#" class="ql tipped">
+                                    <span class="taskName">{{ task.content }}</span>
+                                </a>
+                            </span>
+                </div>
+            </div>
+
+            {% if previous != task.todoListName %}
+            </div>
+            </div>
+            {% endif %}
+
+            </div>
+            {% set previous = task.todoListName %}
+        {% endfor %}
+    </div>
+{% endblock %}

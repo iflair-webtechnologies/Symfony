@@ -1,0 +1,47 @@
+{% extends '::dashboard.html.twig' %}
+{% block title %}Overzicht activiteiten{% endblock %}
+
+{% block header %}
+    {% render(controller('MainBundle:Partial:header', { request : app.request, title : ", accountmanager: " ~ project.accountmanager })) %}
+{% endblock %}
+
+{% block categories %}
+    {% render(controller('MainBundle:Partial:dashboardCategories', { request: app.request, projectId: project.id, counts : counts })) %}
+{% endblock %}
+
+{% block body %}
+    <div class="projectActivity" style="clear:both;">
+        <div class="timelineLine"></div>
+        <table class="overview" cellpadding="0" cellspacing="0">
+            <tbody>
+            {% for i in 0..0 %}
+                <tr class="sectionDate">
+                    <td width="60">
+                        <div class="timelineCircle"><div class="filled"></div><span class="">&nbsp;</span></div>
+                    </td>
+                </tr>
+                {% for activity in activities %}
+                    <tr class="edited task {% if activity.activitytype == "completed" %}completed{% endif %}">
+                        <td style="border-bottom:1px solid white;padding:0;"></td>
+                        <td class="type"><p>Taak</p></td>
+                        <td class="item" style="max-width:500px;word-wrap:break-word;">
+                            <a href="#" class="ql">{{ activity.description }}</a>
+                            {% if activity.extradescription %}
+                                <span>(Lijst: <a href="#" class="extra ql">{{ activity.extradescription }}</a>)</span>
+                            {% endif %}
+                        </td>
+                        <td class="action task edited">&nbsp;</td>
+                        <td class="name" style="position:relative;min-width:130px">
+                            <a href="#">
+                                <img style="width:20px;height:20px;border-radius:3px;border: 1px solid#EEE;" border="0" alt="" src="{{ activity.fromUserAvatarUrl }}">
+                            </a> <span style="position:relative;left:5px;">{{ activity.fromusername }}</span>
+                        </td>
+                        <td class="date admt" width="60">{{ activity.datetime|date('d-m-Y H:i') }}</td>
+                        <td width="16"></td>
+                    </tr>
+                {% endfor %}
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
